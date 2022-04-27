@@ -10,7 +10,7 @@ import { getLocations } from '../actions/index';
 import LocationsScreen from "../screens/LocationsScreen";
 import NewLocationsScreen from "../screens/NewLocationsScreen";
 import TopLocationsScreen from "../screens/TopLocationsScreen";
-import PersianCalendar from "../screens/PersianCalender";
+// import PersianCalendar from "../screens/PersianCalender";
 const TopTab = createMaterialTopTabNavigator();
 
 const TopTabNavigator = () => {
@@ -61,11 +61,11 @@ const TopTabNavigator = () => {
                     component={TopLocationsScreen}
                     options={{ tabBarLabel: "دوره های محبوب" }}
                 />
-                <TopTab.Screen
+                {/* <TopTab.Screen
                     name="PersianCalendar"
                     component={PersianCalendar}
                     options={{ tabBarLabel: "تست" }}
-                />
+                /> */}
             </TopTab.Navigator>
         </Screen>
 

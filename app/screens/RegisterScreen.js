@@ -51,7 +51,7 @@ const RegisterScreen = ({ navigation }) => {
             <View style={styles.kk}>
 
 
-                <Image style={styles.logo} source={require("../assets/logo.png")} />
+                {/* <Image style={styles.logo} source={require("../assets/logo.png")} /> */}
 
 
                 <TouchableOpacity onPress={() =>

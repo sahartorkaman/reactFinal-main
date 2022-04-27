@@ -56,7 +56,7 @@ const LoginScreen = ({ navigation, route }) => {
             <View style={styles.kk}>
 
 
-                <Image style={styles.logo} resizeMode="cover" source={require("../assets/logo.png")} />
+                {/* <Image style={styles.logo} resizeMode="cover" source={require("../assets/logo.png")} /> */}
 
 
                 <TouchableOpacity style={{ marginLeft: 5, marginTop: 40 }} onPress={() =>

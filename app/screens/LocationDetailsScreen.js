@@ -1,6 +1,6 @@
 import React from "react";
 import { RFPercentage } from "react-native-responsive-fontsize";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Screen from "../components/shared/Screen";
 import Card from "../components/shared/Card";
 
@@ -19,6 +19,7 @@ const LocationDetailsScreen = ({ navigation, route }) => {
             backgroundColor: "#c0c5e9",
         },
     });
+    console.log(route.params);
     const { _id, title, price, imageUrl, info } = route.params.course;
 
     return (
@@ -31,6 +32,23 @@ const LocationDetailsScreen = ({ navigation, route }) => {
                 teacher=""
                 LocationInfo={info}
             />
+            <TouchableOpacity
+                onPress={() =>
+                    navigation.navigate("PersianCalendar")
+                }
+
+                Style={styles.style1}
+            >
+
+
+                <Text>انتخاب زمان</Text>
+
+            </TouchableOpacity>
+
+            <View style={styles.textContainer}>
+                <Text>شروع بازه:{route.params.StartDate}</Text>
+                <Text>پایان بازه:{route.params.EndDate}</Text>
+            </View>
         </Screen>
     );
 };
@@ -38,6 +56,12 @@ const LocationDetailsScreen = ({ navigation, route }) => {
 export default LocationDetailsScreen;
 
 const styles = StyleSheet.create({
+    textContainer: {
+        alignItems: 'center',
+        justifyContent: "center",
+        marginTop: 10,
+        padding: 5
+    },
     container: {
         paddingHorizontal: 10,
         backgroundColor: "#f8f4f4",

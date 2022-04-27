@@ -30,27 +30,18 @@ const App = () => {
     }, []);
     if (fontLoading) {
         return (
-            <AnimatedSplash
-                translucent={true}
-                isLoaded={loading}
-                logoImage={require("./app/assets/logoo.png")}
 
-                backgroundColor={"lightgrey"}
-                logoHeight={250}
-                logoWidth={250}
-                style={{ borderRadius: 90 }}
-            >
-                <View style={{ flex: 1, direction: 'rtl' }}>
+            <View style={{ flex: 1, direction: 'rtl' }}>
 
-                    <NavigationContainer>
-                        <Provider store={store}>
-                            <StackNavigator />
-                            {/* <DrawerNavigator /> */}
-                        </Provider>
+                <NavigationContainer>
+                    <Provider store={store}>
+                        <StackNavigator />
 
-                    </NavigationContainer>
-                </View>
-            </AnimatedSplash>
+                    </Provider>
+
+                </NavigationContainer>
+            </View>
+
 
         );
     } else {

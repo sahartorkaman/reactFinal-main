@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import PersianCalendarPicker from 'react-native-persian-calendar-picker';
 import moment from "jalali-moment";
-import Icon from "../components/shared/Icon";
+// import Icon from "../components/shared/Icon";
 
 
 const PersianCalendar = ({ navigation }) => {

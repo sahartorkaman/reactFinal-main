@@ -10,6 +10,7 @@ import TabsNavigator from "./TabsNavigator";
 import LocationDetailsScreen from "../screens/LocationDetailsScreen";
 import LocationsScreen from "../screens/LocationsScreen";
 import DrawerNavigator from "./DrawerNavigator";
+import PersianCalendar from "../screens/PersianCalender";
 
 const StackNavigator = () => {
     const Stack = createStackNavigator();
@@ -31,10 +32,10 @@ const StackNavigator = () => {
                 name="LocationDetailsScreen"
                 component={LocationDetailsScreen}
             />
-            {/* <Stack.Screen
-                name="AllLocations"
-                component={LocationsScreen}
-            /> */}
+            <Stack.Screen
+                name="PersianCalendar"
+                component={PersianCalendar}
+            />
         </Stack.Navigator>
     );
 };
